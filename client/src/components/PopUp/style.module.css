@@ -1,0 +1,59 @@
+.popup{
+    width: 40%;
+    height: 50%;
+    border: solid var(--b-color) 1px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease-in-out;
+    padding: 1%;
+    
+}
+@keyframes slideIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    
+}
+
+.container{
+    width: 100vw;
+    animation: slideIn 0.3s ease-in-out;
+    height: 100vh;
+    background-color: rgba(188, 188, 188, 0.331);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 0 0;
+}
+
+.hidden .popup{
+    animation: slideOut 0.3s ease-in-out forwards;
+}
+
+.hidden{
+    transition:  all ease 1s;
+    opacity: 0;
+    scale: 0;
+}

@@ -1,0 +1,9 @@
+.date{
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.subject{
+    font-size: 25px;
+    font-weight: 600;
+}
